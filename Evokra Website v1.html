@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Evokra.AI — Intelligent automation for modern businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Evokra.AI">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M11 11 L21 11 M11 16 L18 16 M11 21 L21 21" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M20 13 L24 16 L20 19 Z" fill="#2A6FE4"/>
+      </svg>
+      <span>Evokra<span class="ai">.AI</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#products">Products <svg class="caret" viewBox="0 0 10 10" fill="none"><path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#cases">Customers</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#">Docs</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="signin">Sign in</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Start free
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-pill reveal">
+      <span class="tag">NEW</span>
+      <span>Agent Studio 2.0 — generally available</span>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div>
+
+    <h1 class="h-display reveal" data-delay="1">
+      Intelligent automation<br/>
+      <em>for modern businesses.</em>
+    </h1>
+
+    <p class="lede reveal" data-delay="2">
+      Evokra builds the AI agents, LLM integrations, and workflow systems that let your team stop doing repetitive work — and start moving at the speed of thought.
+    </p>
+
+    <div class="hero-actions reveal" data-delay="3">
+      <a href="#contact" class="btn btn-primary">
+        Book a discovery call
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#products" class="btn btn-ghost">See it in action</a>
+    </div>
+  </div>
+
+  <!-- Hero stage: animated agent dashboard mock -->
+  <div class="wrap reveal" data-delay="4">
+    <div class="hero-stage">
+      <div class="hero-panel">
+        <div class="panel-bar">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span class="url">evokra.ai/studio/agents/ops-runner</span>
+          <span class="live">LIVE · 4 agents running</span>
+        </div>
+        <div class="panel-body">
+
+          <!-- Agent list -->
+          <div class="agent-list">
+            <h6>Active agents</h6>
+            <div class="agent-row active">
+              <span class="ico">◆</span>
+              <span>Ops Runner</span>
+              <span class="meta">∞</span>
+            </div>
+            <div class="agent-row">
+              <span class="ico">◇</span>
+              <span>Sales Intel</span>
+              <span class="meta">12m</span>
+            </div>
+            <div class="agent-row">
+              <span class="ico">◇</span>
+              <span>RAG Concierge</span>
+              <span class="meta">3m</span>
+            </div>
+            <div class="agent-row">
+              <span class="ico">◇</span>
+              <span>Invoice Parser</span>
+              <span class="meta">1h</span>
+            </div>
+            <div style="margin-top: 24px;">
+              <h6>Tools connected</h6>
+              <div style="display:flex; flex-wrap: wrap; gap:6px;">
+                <span class="chip" style="font-family:var(--mono);font-size:11px;padding:5px 9px;border-radius:6px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--ink-soft)">Slack</span>
+                <span class="chip" style="font-family:var(--mono);font-size:11px;padding:5px 9px;border-radius:6px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--ink-soft)">Notion</span>
+                <span class="chip" style="font-family:var(--mono);font-size:11px;padding:5px 9px;border-radius:6px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--ink-soft)">HubSpot</span>
+                <span class="chip" style="font-family:var(--mono);font-size:11px;padding:5px 9px;border-radius:6px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--ink-soft)">Gmail</span>
+                <span class="chip" style="font-family:var(--mono);font-size:11px;padding:5px 9px;border-radius:6px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--ink-soft)">Stripe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stream -->
+          <div class="agent-stream">
+            <div class="stream-head">
+              <span class="tab on">Reasoning</span>
+              <span class="tab">Tools</span>
+              <span class="tab">Output</span>
+              <span style="margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--ink-dim)">Task #2487</span>
+            </div>
+            <div class="thought done">
+              <span class="step">1</span>
+              <div>Reviewed weekly pipeline · pulled <span class="tool">hubspot.deals</span> for accounts marked <span class="dim">"at risk"</span></div>
+            </div>
+            <div class="thought done">
+              <span class="step">2</span>
+              <div>Cross-referenced 14 accounts against <span class="tool">stripe.invoices</span> — 3 with overdue balance &gt; 30d</div>
+            </div>
+            <div class="thought run">
+              <span class="step">3</span>
+              <div>Drafting personalized outreach via <span class="tool">gmail.send</span> with reasoning summary for review<span class="dim">…</span></div>
+            </div>
+            <div class="thought">
+              <span class="step">4</span>
+              <div class="dim">Awaiting human-in-the-loop approval before send</div>
+            </div>
+          </div>
+
+          <!-- Side metrics -->
+          <div class="agent-side">
+            <div class="metric-card">
+              <div class="k">Tasks today</div>
+              <div class="v">128</div>
+              <div class="d">+24% vs. yesterday</div>
+              <div class="spark">
+                <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+                  <path d="M0 22 L12 18 L24 24 L36 16 L48 20 L60 12 L72 14 L84 7 L100 4" stroke="#4D8BFF" stroke-width="1.5" fill="none"/>
+                </svg>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="k">Avg. resolution</div>
+              <div class="v">38s</div>
+              <div class="d" style="color:var(--ink-mid)">vs. 14m manual</div>
+            </div>
+            <div class="metric-card">
+              <div class="k">Confidence</div>
+              <div class="v" style="display:flex;align-items:baseline;gap:8px">97.4<span style="font-size:14px;color:var(--ink-dim)">%</span></div>
+              <div style="height:6px;background:rgba(255,255,255,0.05);border-radius:3px;overflow:hidden;margin-top:6px">
+                <div style="height:100%;width:97%;background:linear-gradient(90deg,#4D8BFF,#2A6FE4);border-radius:3px"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom-fade" aria-hidden="true"></div>
+</section>
+
+<!-- ========== LOGO STRIP ========== -->
+<section class="logos" style="padding: 56px 0">
+  <div class="wrap">
+    <div class="logos-label">Trusted by operators at fast-moving teams</div>
+    <div class="logo-row">
+      <span class="l">◇ Northwind</span>
+      <span class="l">▲ Lattice Labs</span>
+      <span class="l">◯ Helio</span>
+      <span class="l">◢◤ Meridian</span>
+      <span class="l">⌬ Cobalt&nbsp;Health</span>
+      <span class="l">▣ Foundry&nbsp;Works</span>
+      <span class="l">⬡ Plinth</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MANIFESTO / ABOUT ========== -->
+<section id="about">
+  <div class="wrap">
+    <div class="manifesto-grid">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> About Evokra</p>
+        <h2 class="manifesto reveal" data-delay="1" style="margin-top: 24px;">
+          We build the <b>connective tissue</b> between a team's <em>intent</em> and the software that <b>executes</b> it.
+        </h2>
+      </div>
+      <div class="manifesto-side">
+        <div class="principles">
+          <div class="principle reveal" data-delay="1">
+            <div class="k">01 — Operators first</div>
+            <p>Every engagement starts with the work itself, not the model. We shadow your process, then build only what removes friction.</p>
+          </div>
+          <div class="principle reveal" data-delay="2">
+            <div class="k">02 — You own the system</div>
+            <p>Code, credentials, prompts, workflows — yours on day one. No platform lock-in, no opaque pipelines.</p>
+          </div>
+          <div class="principle reveal" data-delay="3">
+            <div class="k">03 — Ship in weeks</div>
+            <p>Tight scopes, weekly check-ins, working software in 2–4 weeks. Long roadmaps are how AI projects die.</p>
+          </div>
+          <div class="principle reveal" data-delay="4">
+            <div class="k">04 — Model-agnostic</div>
+            <p>Claude, GPT, Gemini, open-source — we pick what the problem needs and route between them. The platform is the product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hairline"></div>
+
+<!-- ========== PRODUCTS / SERVICES (BENTO) ========== -->
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> What we build</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">Three layers of intelligence,<br/>one composable platform.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">From quick no-code automations to autonomous, multi-agent systems — Evokra ships across the full stack so you don't have to manage three vendors.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- LEAD CARD: Agents -->
+      <article class="svc lead reveal">
+        <div class="svc-tag">01 · Agents</div>
+        <div class="svc-agent-vis" aria-hidden="true">
+          <div class="ring"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="core"></div>
+          <div class="o" style="--R: 175px; animation-duration: 22s;"><span class="orbit-dot">⌬</span></div>
+          <div class="o" style="--R: 175px; animation-duration: 22s; animation-delay: -7s;"><span class="orbit-dot b">◆</span></div>
+          <div class="o" style="--R: 175px; animation-duration: 22s; animation-delay: -14s;"><span class="orbit-dot">⚡</span></div>
+          <div class="o" style="--R: 130px; animation-duration: 16s; animation-direction: reverse;"><span class="orbit-dot b">▲</span></div>
+          <div class="o" style="--R: 130px; animation-duration: 16s; animation-direction: reverse; animation-delay: -8s;"><span class="orbit-dot">●</span></div>
+        </div>
+        <h3>AI Agents</h3>
+        <p>Autonomous systems that reason, plan, and act on your behalf — research, sales triage, ops runners, custom workflows. Built on Claude &amp; GPT-4 with full observability.</p>
+        <div class="cap-row">
+          <span class="chip"><span class="d"></span>LangGraph</span>
+          <span class="chip"><span class="d"></span>CrewAI</span>
+          <span class="chip"><span class="d"></span>Tool use</span>
+          <span class="chip"><span class="d"></span>Human in loop</span>
+        </div>
+      </article>
+
+      <!-- B: LLM Integrations -->
+      <article class="svc b reveal" data-delay="1">
+        <div class="svc-tag">02 · Integrations</div>
+        <div class="svc-doc" aria-hidden="true">
+          <div class="doc">
+            <div style="height:6px;background:rgba(255,255,255,0.10);border-radius:2px;margin-bottom:6px;width:80%"></div>
+            <div style="height:6px;background:rgba(255,255,255,0.10);border-radius:2px;margin-bottom:6px"></div>
+            <div style="height:6px;border-radius:2px;margin-bottom:6px;width:60%"><span class="hl" style="display:inline-block;height:6px;width:100%"></span></div>
+            <div style="height:6px;background:rgba(255,255,255,0.10);border-radius:2px;margin-bottom:6px;width:90%"></div>
+            <div style="height:6px;background:rgba(255,255,255,0.10);border-radius:2px;width:40%"></div>
+          </div>
+          <div class="doc">
+            <div style="height:6px;background:rgba(255,255,255,0.10);border-radius:2px;margin-bottom:6px;width:70%"></div>
+            <div style="height:6px;border-radius:2px;margin-bottom:6px;width:90%"><span class="hl" style="display:inline-block;height:6px;width:55%"></span><span style="display:inline-block;width:35%;height:6px;background:rgba(255,255,255,0.10);border-radius:2px"></span></div>
+            <div style="height:6px;background:rgba(255,255,255,0.10);border-radius:2px;width:80%"></div>
+          </div>
+        </div>
+        <h3>LLM Integrations</h3>
+        <p>RAG pipelines, document Q&amp;A, natural-language interfaces — your private data, made conversational.</p>
+      </article>
+
+      <!-- C: Automations -->
+      <article class="svc c reveal" data-delay="2">
+        <div class="svc-tag">03 · Workflows</div>
+        <svg class="svc-visual" viewBox="0 0 320 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="line-g" x1="0" x2="1">
+              <stop offset="0" stop-color="#4D8BFF" stop-opacity="0"/>
+              <stop offset=".5" stop-color="#4D8BFF" stop-opacity=".7"/>
+              <stop offset="1" stop-color="#4D8BFF" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g stroke="rgba(255,255,255,0.10)" stroke-width="1" fill="none">
+            <path d="M40 60 C 120 60, 120 140, 200 140"/>
+            <path d="M40 140 C 120 140, 120 60, 200 60"/>
+            <path d="M40 220 C 120 220, 120 140, 200 140"/>
+            <path d="M200 60 L 290 60"/>
+            <path d="M200 140 L 290 140"/>
+          </g>
+          <g stroke="url(#line-g)" stroke-width="1.5" fill="none">
+            <path d="M40 60 C 120 60, 120 140, 200 140" stroke-dasharray="6 8" class="flow-anim"/>
+          </g>
+          <g>
+            <rect x="20" y="48" width="40" height="24" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+            <rect x="20" y="128" width="40" height="24" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+            <rect x="20" y="208" width="40" height="24" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+            <rect x="180" y="48" width="40" height="24" rx="6" fill="rgba(77,139,255,0.12)" stroke="rgba(77,139,255,0.4)"/>
+            <rect x="180" y="128" width="40" height="24" rx="6" fill="rgba(77,139,255,0.12)" stroke="rgba(77,139,255,0.4)"/>
+            <rect x="270" y="48" width="40" height="24" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+            <rect x="270" y="128" width="40" height="24" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+          </g>
+        </svg>
+        <h3>Automations</h3>
+        <p>n8n &amp; Make workflows that quietly handle the dull stuff — shipped in days, not quarters.</p>
+      </article>
+
+      <!-- D: Capabilities strip -->
+      <article class="svc d reveal" data-delay="3">
+        <div class="svc-tag">04 · Platform</div>
+        <h3>Observability, evals &amp; deploy infrastructure — included.</h3>
+        <p>Every system we ship comes with prompt versioning, run-trace logging, eval suites, and deploy pipelines from day one. Production-ready, not a demo.</p>
+        <div class="cap-row" style="margin-top: 18px;">
+          <span class="chip"><span class="d"></span>Prompt versioning</span>
+          <span class="chip"><span class="d"></span>Run traces</span>
+          <span class="chip"><span class="d"></span>Eval harness</span>
+          <span class="chip"><span class="d"></span>Cost monitoring</span>
+          <span class="chip"><span class="d"></span>Rollback</span>
+          <span class="chip"><span class="d"></span>SOC 2 ready</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="hairline"></div>
+
+<!-- ========== CAPABILITIES ========== -->
+<section id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> Capabilities</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">Built for the messy<br/>realities of real work.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">A starter kit of capabilities every Evokra system ships with. Mix, match, extend.</p>
+    </div>
+
+    <div class="caps-grid reveal">
+      <div class="cap">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2 L19 6 L19 14 L12 18 L5 14 L5 6 Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2" fill="currentColor"/></svg></div>
+        <h4>Multi-agent orchestration</h4>
+        <p>Specialist agents that delegate, debate, and converge on answers — coordinated by a supervisor agent you can prompt-edit.</p>
+      </div>
+      <div class="cap">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M9 14h6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h4>RAG with citations</h4>
+        <p>Every answer traceable to source. Chunk-level scoring, re-ranking, and inline citations — auditable from day one.</p>
+      </div>
+      <div class="cap">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h4>Tool &amp; function use</h4>
+        <p>Agents that call your APIs, scrape docs, query databases — with structured outputs and typed schemas.</p>
+      </div>
+      <div class="cap">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h4>Human-in-the-loop</h4>
+        <p>Approval gates, edit-and-send queues, confidence thresholds. The model proposes; your team decides.</p>
+      </div>
+      <div class="cap">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12 L9 6 L13 10 L21 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Real-time observability</h4>
+        <p>Trace every reasoning step, tool call, and token cost. Filter, replay, debug without leaving the dashboard.</p>
+      </div>
+      <div class="cap">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2 L4 6 V12 C4 17 12 22 12 22 C12 22 20 17 20 12 V6 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12 L11 14 L15 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>SOC 2 — ready infra</h4>
+        <p>Self-hosted or managed. SSO, audit logs, encrypted secrets, residency controls. Built for regulated teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hairline"></div>
+
+<!-- ========== METRICS / KPI ========== -->
+<section id="metrics" style="padding: 80px 0 100px;">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> Outcomes</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">Numbers from real deployments.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">Aggregate metrics across 40+ shipped systems in the last 18 months. Updated monthly.</p>
+    </div>
+
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="lbl">Workflows shipped</div>
+        <div class="num" data-count="212"><span class="counter">0</span>+</div>
+        <div class="desc">across agents, RAG, and no-code builds</div>
+      </div>
+      <div class="metric">
+        <div class="lbl">Avg. delivery</div>
+        <div class="num"><span class="counter" data-count="14">0</span><span class="u">days</span></div>
+        <div class="desc">from kickoff to live production</div>
+      </div>
+      <div class="metric">
+        <div class="lbl">Hours reclaimed</div>
+        <div class="num"><span class="counter" data-count="38">0</span><span class="u">K</span></div>
+        <div class="desc">per quarter, across our customer base</div>
+      </div>
+      <div class="metric">
+        <div class="lbl">Production uptime</div>
+        <div class="num"><span class="counter" data-count="99.9" data-decimals="1">0</span><span class="u">%</span></div>
+        <div class="desc">P95 SLA across hosted deployments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ARCHITECTURE / AI CAPABILITIES ========== -->
+<section id="architecture">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> The Evokra engine</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">One reasoning core.<br/>Every input. Every system.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">A single orchestration layer that routes between the best model for each task, calls your tools, and respects your guardrails — observable end to end.</p>
+    </div>
+
+    <div class="arch-wrap reveal">
+      <div class="arch-diag">
+
+        <div class="arch-col arch-left">
+          <h6>Inputs</h6>
+          <div class="arch-stack">
+            <div class="arch-node"><span class="ico">SL</span> Slack messages</div>
+            <div class="arch-node"><span class="ico">EM</span> Inbound email</div>
+            <div class="arch-node"><span class="ico">DB</span> Database events</div>
+            <div class="arch-node"><span class="ico">WB</span> Webhooks &amp; APIs</div>
+            <div class="arch-node"><span class="ico">DC</span> Documents · PDFs</div>
+          </div>
+        </div>
+
+        <div class="arch-center">
+          <div class="arch-brain">
+            <div class="label">Evokra Engine<small>Reasoning · Routing · Guardrails</small></div>
+          </div>
+          <div class="arch-lines" aria-hidden="true">
+            <svg viewBox="0 0 600 320" preserveAspectRatio="none">
+              <g stroke="rgba(77,139,255,0.35)" stroke-width="1.5" fill="none">
+                <path class="flow" d="M0 40 C 150 40, 200 160, 280 160"/>
+                <path class="flow" d="M0 100 C 150 100, 200 160, 280 160" style="animation-delay:.6s"/>
+                <path class="flow" d="M0 160 L 280 160" style="animation-delay:1.2s"/>
+                <path class="flow" d="M0 220 C 150 220, 200 160, 280 160" style="animation-delay:1.8s"/>
+                <path class="flow" d="M0 280 C 150 280, 200 160, 280 160" style="animation-delay:2.4s"/>
+
+                <path class="flow" d="M320 160 C 400 160, 450 60,  600 60"  style="animation-delay:.3s"/>
+                <path class="flow" d="M320 160 C 400 160, 450 120, 600 120" style="animation-delay:.9s"/>
+                <path class="flow" d="M320 160 L 600 160" style="animation-delay:1.5s"/>
+                <path class="flow" d="M320 160 C 400 160, 450 220, 600 220" style="animation-delay:2.1s"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="arch-col arch-right">
+          <h6>Actions</h6>
+          <div class="arch-stack">
+            <div class="arch-node"><span class="ico">EM</span> Drafted &amp; sent emails</div>
+            <div class="arch-node"><span class="ico">CR</span> CRM updates</div>
+            <div class="arch-node"><span class="ico">RP</span> Generated reports</div>
+            <div class="arch-node"><span class="ico">TK</span> Tickets &amp; tasks</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hairline"></div>
+
+<!-- ========== CASE STUDIES ========== -->
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> Case studies</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">Built for operators.<br/>Measured by outcomes.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">A few systems we've shipped recently. Every project starts with the work; metrics come after.</p>
+    </div>
+
+    <div class="cases-grid">
+      <article class="case reveal">
+        <div class="case-head">
+          <div class="case-logo">M</div>
+          <div>
+            <div class="case-sector">Fintech · 80 ppl</div>
+            <div style="font-size:13px; color: var(--ink-soft); margin-top:2px">Meridian Capital</div>
+          </div>
+        </div>
+        <h3>Deal-memo agent that drafts in 4 minutes, not 4 hours.</h3>
+        <p>An autonomous research agent that pulls from PitchBook, Crunchbase, and internal CRM to produce first-draft memos for the investment team.</p>
+        <div class="case-metric">
+          <div class="big">68×</div>
+          <div class="lbl">faster first draft</div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-delay="1">
+        <div class="case-head">
+          <div class="case-logo">C</div>
+          <div>
+            <div class="case-sector">Healthcare · 300 ppl</div>
+            <div style="font-size:13px; color: var(--ink-soft); margin-top:2px">Cobalt Health</div>
+          </div>
+        </div>
+        <h3>Prior-auth automation across 14 payer portals.</h3>
+        <p>RAG-powered system that reads clinical notes and submits compliant prior-authorization packets directly to insurers — with citations.</p>
+        <div class="case-metric">
+          <div class="big">$1.4M</div>
+          <div class="lbl">in admin time recovered / yr</div>
+        </div>
+      </article>
+
+      <article class="case reveal" data-delay="2">
+        <div class="case-head">
+          <div class="case-logo">N</div>
+          <div>
+            <div class="case-sector">Logistics · 120 ppl</div>
+            <div style="font-size:13px; color: var(--ink-soft); margin-top:2px">Northwind Freight</div>
+          </div>
+        </div>
+        <h3>Shipment-exception triage that routes itself.</h3>
+        <p>A supervisor agent that ingests carrier alerts, predicts delay impact, drafts customer comms, and only escalates the truly novel cases.</p>
+        <div class="case-metric">
+          <div class="big">92%</div>
+          <div class="lbl">of exceptions auto-resolved</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="hairline"></div>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section id="testimonials" style="padding: 100px 0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> What teams say</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">Calm, capable, on time.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">A few words from operators we've worked with.</p>
+    </div>
+  </div>
+
+  <div class="marquee reveal">
+    <div class="marquee-track">
+      <!-- Set A -->
+      <div class="testimonial">
+        <p>"We'd been talking about an AI ops assistant for six months. Evokra shipped a working one in three weeks — and it's still running, untouched, eight months later."</p>
+        <div class="who"><div class="avatar">SL</div><div><div class="name">Sara L.</div><div class="role">Head of Operations · Meridian</div></div></div>
+      </div>
+      <div class="testimonial">
+        <p>"Most agencies sell you a demo. Evokra hands you a system. Code, docs, runbook, eval suite — we own all of it."</p>
+        <div class="who"><div class="avatar">DK</div><div><div class="name">Daniel K.</div><div class="role">CTO · Lattice Labs</div></div></div>
+      </div>
+      <div class="testimonial">
+        <p>"They asked the right questions in week one and ignored half of our original brief — for which I'm now extremely grateful."</p>
+        <div class="who"><div class="avatar">MR</div><div><div class="name">Maya R.</div><div class="role">VP Product · Helio</div></div></div>
+      </div>
+      <div class="testimonial">
+        <p>"The eval harness alone was worth the engagement. We finally have a way to ship prompt changes without breathing into a paper bag."</p>
+        <div class="who"><div class="avatar">JT</div><div><div class="name">Jordan T.</div><div class="role">Engineering Lead · Foundry</div></div></div>
+      </div>
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="testimonial">
+        <p>"We'd been talking about an AI ops assistant for six months. Evokra shipped a working one in three weeks — and it's still running, untouched, eight months later."</p>
+        <div class="who"><div class="avatar">SL</div><div><div class="name">Sara L.</div><div class="role">Head of Operations · Meridian</div></div></div>
+      </div>
+      <div class="testimonial">
+        <p>"Most agencies sell you a demo. Evokra hands you a system. Code, docs, runbook, eval suite — we own all of it."</p>
+        <div class="who"><div class="avatar">DK</div><div><div class="name">Daniel K.</div><div class="role">CTO · Lattice Labs</div></div></div>
+      </div>
+      <div class="testimonial">
+        <p>"They asked the right questions in week one and ignored half of our original brief — for which I'm now extremely grateful."</p>
+        <div class="who"><div class="avatar">MR</div><div><div class="name">Maya R.</div><div class="role">VP Product · Helio</div></div></div>
+      </div>
+      <div class="testimonial">
+        <p>"The eval harness alone was worth the engagement. We finally have a way to ship prompt changes without breathing into a paper bag."</p>
+        <div class="who"><div class="avatar">JT</div><div><div class="name">Jordan T.</div><div class="role">Engineering Lead · Foundry</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hairline"></div>
+
+<!-- ========== PRICING ========== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal"><span class="dot"></span> Pricing</p>
+        <h2 class="reveal" data-delay="1" style="margin-top: 16px;">Transparent project pricing.<br/>Optional retainer.</h2>
+      </div>
+      <p class="lede reveal" data-delay="2">Every project is fixed-scope, fixed-price. Most include an optional monthly retainer for tuning, eval upkeep, and model updates.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <div class="plan-name">Starter</div>
+        <div class="price">$1.5K <small>– $5K</small></div>
+        <div class="price-sub">No-code automations · 2 weeks</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> n8n or Make workflow build</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Up to 3 integrated services</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Full documentation &amp; handoff</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 14-day delivery</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost plan-cta">Get started</a>
+      </div>
+
+      <div class="plan featured reveal" data-delay="1">
+        <span class="featured-tag">Most popular</span>
+        <div class="plan-name">Growth</div>
+        <div class="price">$5K <small>– $20K</small></div>
+        <div class="price-sub">LLM integrations · 3–4 weeks</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Claude or GPT-4 integration</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> RAG pipeline with citations</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Custom frontend or API</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Eval harness + observability</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary plan-cta">Talk to us</a>
+      </div>
+
+      <div class="plan reveal" data-delay="2">
+        <div class="plan-name">Agent</div>
+        <div class="price">$10K <small>– $40K</small></div>
+        <div class="price-sub">Autonomous systems · 4–6 weeks</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Multi-step agentic system</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Tool use, web access, memory</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Human-in-the-loop dashboard</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> SOC 2-ready deployment</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost plan-cta">Scope a project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section id="contact" style="padding: 60px 0 120px;">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <p class="eyebrow"><span class="dot"></span> Let's build</p>
+      <h2 style="margin-top: 16px;">Tell us where the<br/>work is breaking.</h2>
+      <p class="lede">A 20-minute call. No pitch, no jargon. You leave with a clear picture of what's possible — whether or not we end up working together.</p>
+      <form class="cta-form" onsubmit="event.preventDefault(); alert('Thanks — we will be in touch within one business day.')">
+        <input type="email" placeholder="you@company.com" aria-label="Email"/>
+        <button class="btn btn-primary" type="submit">
+          Book a call
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <div style="margin-top: 18px; font-size: 12.5px; color: var(--ink-dim);">Or email us directly · <a href="mailto:hello@evokra.ai" style="color: var(--ink-soft); text-decoration: underline; text-decoration-color: var(--ink-faint);">hello@evokra.ai</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="Evokra.AI">
+          <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M11 11 L21 11 M11 16 L18 16 M11 21 L21 21" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 13 L24 16 L20 19 Z" fill="#2A6FE4"/>
+          </svg>
+          <span>Evokra<span class="ai">.AI</span></span>
+        </a>
+        <p>Intelligent automation for modern businesses. Designed, built, and operated by humans who like shipping things.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Products</h6>
+        <ul>
+          <li><a href="#products">AI Agents</a></li>
+          <li><a href="#products">LLM Integrations</a></li>
+          <li><a href="#products">No-code Automations</a></li>
+          <li><a href="#products">Platform</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#cases">Customers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Resources</h6>
+        <ul>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Changelog</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="mailto:hello@evokra.ai">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Evokra Labs, Inc.  ·  Built with care.</span>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18H5.7V9.7h2.6V18zM7 8.4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18.3 18h-2.6v-4.5c0-1.1-.4-1.8-1.4-1.8-.8 0-1.2.5-1.4 1V18h-2.6V9.7h2.5v1.1c.4-.6 1.1-1.4 2.6-1.4 1.9 0 3 1.2 3 3.8V18z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.5-.3.8 0 1.7.1 2.5.3 1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5C19.1 20.2 22 16.4 22 12 22 6.5 17.5 2 12 2z"/></svg></a>
+        <a href="#" aria-label="X"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.49 7.41L22 22h-6.81l-4.78-6.41L4.5 22H1.74l6.96-7.95L2 2h6.97l4.33 5.83L18.244 2zm-2.39 18h1.87L7.21 4H5.24l10.614 16z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPT: scroll reveals + counters + nav state ========== -->
+<script>
+  // Nav state on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // IntersectionObserver — reveal sections + start counters
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      // start counters when metric strip becomes visible
+      e.target.querySelectorAll('.counter').forEach(startCounter);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Animated number counter
+  function startCounter(el) {
+    if (el.dataset.started) return;
+    el.dataset.started = '1';
+    const target = parseFloat(el.dataset.count || el.parentElement.dataset.count || '0');
+    const decimals = parseInt(el.dataset.decimals || '0');
+    const duration = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const val = target * eased;
+      el.textContent = decimals ? val.toFixed(decimals) : Math.round(val).toString();
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Subtle hero panel parallax tied to scroll
+  const panel = document.querySelector('.hero-panel');
+  const glow = document.querySelector('.hero-glow');
+  window.addEventListener('scroll', () => {
+    const y = Math.min(400, window.scrollY);
+    if (panel) panel.style.transform = `rotateX(${8 - y * 0.012}deg) translateY(${y * 0.08}px)`;
+    if (glow)  glow.style.transform  = `translate(-50%, ${y * -0.15}px)`;
+  }, { passive: true });
+</script>
+
+</body>
+</html>
