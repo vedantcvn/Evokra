@@ -8,6 +8,47 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+
+<!-- ======================================================
+  EMAILJS SETUP STATUS
+  ========================================================
+  ✓  Public Key   : gioxCQYYSthrvLRm1
+  ✓  Service ID   : service_xvyimcj  (Gmail — vedant1306@gmail.com)
+  ✓  Template     : template_25dpppn  (Auto-Reply → sends to visitor)
+
+  !! IMPORTANT — Fix Gmail auth error first:
+     EmailJS → Email Services → Gmail → Disconnect
+     → Connect Account → allow "Send email on your behalf"
+     → Create Service (send test email to verify)
+
+  TEMPLATE SETUP (template_25dpppn):
+  ────────────────────────────────────────────────────────
+  In EmailJS → Email Templates → edit "Auto-Reply":
+
+    To Email:   {{user_email}}
+    From Name:  Albert @ Evokra
+    Reply-to:   sales@evokra.ai
+    Subject:    You're on our radar — Evokra
+    Body:
+      Hey,
+
+      Thanks for reaching out — got your request and someone
+      from the team will be in touch within one business day.
+
+      No prep needed. Just 20 minutes and an honest description
+      of what's slow in your workflow.
+
+      Talk soon,
+      Albert
+      Evokra · evokra.ai
+      sales@evokra.ai
+
+  OPTIONAL — Sales notification template:
+     Create a second template, set To: sales@evokra.ai
+     Subject: New inquiry — {{user_email}}
+     Then replace EJS_TPL_SALES in the script below.
+  ======================================================== -->
+
 </head>
 <body>
 
@@ -459,7 +500,6 @@
                 <path class="flow" d="M0 160 L 280 160" style="animation-delay:1.2s"/>
                 <path class="flow" d="M0 220 C 150 220, 200 160, 280 160" style="animation-delay:1.8s"/>
                 <path class="flow" d="M0 280 C 150 280, 200 160, 280 160" style="animation-delay:2.4s"/>
-
                 <path class="flow" d="M320 160 C 400 160, 450 60,  600 60"  style="animation-delay:.3s"/>
                 <path class="flow" d="M320 160 C 400 160, 450 120, 600 120" style="animation-delay:.9s"/>
                 <path class="flow" d="M320 160 L 600 160" style="animation-delay:1.5s"/>
@@ -660,21 +700,47 @@
   </div>
 </section>
 
-<!-- ========== CTA ========== -->
+<!-- ========== CTA — LET'S BUILD ========== -->
 <section id="contact" style="padding: 60px 0 120px;">
   <div class="wrap">
     <div class="cta-card reveal">
       <p class="eyebrow"><span class="dot"></span> Let's build</p>
       <h2 style="margin-top: 16px;">Tell us where the<br/>work is breaking.</h2>
       <p class="lede">A 20-minute call. No pitch, no jargon. You leave with a clear picture of what's possible — whether or not we end up working together.</p>
-      <form class="cta-form" onsubmit="event.preventDefault(); alert('Thanks — we will be in touch within one business day.')">
-        <input type="email" placeholder="you@company.com" aria-label="Email"/>
-        <button class="btn btn-primary" type="submit">
-          Book a call
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </form>
-      <div style="margin-top: 18px; font-size: 12.5px; color: var(--ink-dim);">Or email us directly · <a href="mailto:hello@evokra.ai" style="color: var(--ink-soft); text-decoration: underline; text-decoration-color: var(--ink-faint);">hello@evokra.ai</a></div>
+
+      <!-- FORM WRAPPER -->
+      <div class="cta-form-wrap">
+        <form class="cta-form" id="ctaForm" novalidate>
+          <input
+            type="email"
+            id="ctaEmail"
+            placeholder="you@company.com"
+            aria-label="Your work email"
+            autocomplete="email"
+            required
+          />
+          <button class="btn btn-primary" type="submit" id="ctaBtn">
+            Book a call
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="cta-status success" id="ctaSuccess" role="status" aria-live="polite">
+          ✓&nbsp;&nbsp;Got it — check your inbox for a confirmation. We'll be in touch within one business day.
+        </div>
+
+        <!-- ERROR -->
+        <div class="cta-status error" id="ctaError" role="alert">
+          Something went sideways on our end. Email us directly at
+          <a href="mailto:sales@evokra.ai">sales@evokra.ai</a> and we'll sort it.
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; font-size: 12.5px; color: var(--ink-dim);">
+        Or email us directly ·
+        <a href="mailto:sales@evokra.ai" style="color: var(--ink-soft); text-decoration: underline; text-decoration-color: var(--ink-faint);">sales@evokra.ai</a>
+      </div>
     </div>
   </div>
 </section>
@@ -720,7 +786,7 @@
           <li><a href="#">Docs</a></li>
           <li><a href="#">Changelog</a></li>
           <li><a href="#">Security</a></li>
-          <li><a href="mailto:hello@evokra.ai">Contact</a></li>
+          <li><a href="mailto:sales@evokra.ai">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -735,53 +801,153 @@
   </div>
 </footer>
 
-<!-- ========== SCRIPT: scroll reveals + counters + nav state ========== -->
+<!-- Inline keyframe for button spinner (avoids touching styles.css) -->
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<!-- ========== SCRIPTS ========== -->
 <script>
-  // Nav state on scroll
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+// ─────────────────────────────────────────────────────────────────────────────
+//  Web3Forms — free, no backend, no SDK needed
+//  1. Go to https://web3forms.com
+//  2. Enter sales@evokra.ai → click "Create Access Key"
+//  3. Paste the key below — done.
+// ─────────────────────────────────────────────────────────────────────────────
+const W3F_ACCESS_KEY = 'cb703871-909f-4653-ac30-8543f9ccfa2e';
 
-  // IntersectionObserver — reveal sections + start counters
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('in');
-      // start counters when metric strip becomes visible
-      e.target.querySelectorAll('.counter').forEach(startCounter);
-      io.unobserve(e.target);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// ── CTA Form handler ──────────────────────────────────────────────────────────
+const ctaForm    = document.getElementById('ctaForm');
+const ctaEmailEl = document.getElementById('ctaEmail');
+const ctaBtn     = document.getElementById('ctaBtn');
+const ctaSuccess = document.getElementById('ctaSuccess');
+const ctaError   = document.getElementById('ctaError');
 
-  // Animated number counter
-  function startCounter(el) {
-    if (el.dataset.started) return;
-    el.dataset.started = '1';
-    const target = parseFloat(el.dataset.count || el.parentElement.dataset.count || '0');
-    const decimals = parseInt(el.dataset.decimals || '0');
-    const duration = 1500;
-    const start = performance.now();
-    function tick(now) {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      const val = target * eased;
-      el.textContent = decimals ? val.toFixed(decimals) : Math.round(val).toString();
-      if (t < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
+ctaForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const email = ctaEmailEl.value.trim();
+
+  // Validate email
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    ctaEmailEl.focus();
+    ctaEmailEl.style.outline = '2px solid rgba(255,80,80,0.6)';
+    setTimeout(() => ctaEmailEl.style.outline = '', 1800);
+    return;
   }
 
-  // Subtle hero panel parallax tied to scroll
-  const panel = document.querySelector('.hero-panel');
-  const glow = document.querySelector('.hero-glow');
-  window.addEventListener('scroll', () => {
-    const y = Math.min(400, window.scrollY);
-    if (panel) panel.style.transform = `rotateX(${8 - y * 0.012}deg) translateY(${y * 0.08}px)`;
-    if (glow)  glow.style.transform  = `translate(-50%, ${y * -0.15}px)`;
-  }, { passive: true });
+  // Loading state
+  ctaBtn.disabled = true;
+  ctaBtn.innerHTML = `
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+         style="animation:spin 0.8s linear infinite;display:inline-block">
+      <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
+      <path d="M12 2 A10 10 0 0 1 22 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    Sending…`;
+  ctaSuccess.style.display = 'none';
+  ctaError.style.display   = 'none';
+
+  const submittedAt = new Date().toLocaleString('en-US', {
+    weekday: 'short', month: 'short', day: 'numeric',
+    year: 'numeric', hour: '2-digit', minute: '2-digit'
+  });
+
+  try {
+    // Build FormData — Web3Forms official method
+    const formData = new FormData();
+    formData.append('access_key', W3F_ACCESS_KEY);
+    formData.append('name',       'Website Inquiry');
+    formData.append('email',      email);
+    formData.append('subject',    'New discovery call request — ' + email);
+    formData.append('from_name',  'Evokra Website');
+    formData.append('replyto',    email);
+    formData.append('botcheck',   '');
+    formData.append('message',
+      'Hi team,' + '\n\n' +
+      'New inquiry from evokra.ai' + '\n\n' +
+      'Email:     ' + email + '\n' +
+      'Submitted: ' + submittedAt + '\n\n' +
+      'Head to your calendar and reach out.\n\n— Evokra site'
+    );
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body:   formData
+    });
+
+    const data = await response.json();
+    console.log('[Evokra] Web3Forms:', data);
+
+    if (response.ok && data.success) {
+      ctaSuccess.style.display = 'block';
+      ctaForm.reset();
+    } else {
+      console.error('[Evokra] Failed:', data.message);
+      ctaError.style.display = 'block';
+    }
+
+  } catch (err) {
+    console.error('[Evokra] Network error:', err);
+    ctaError.style.display = 'block';
+  } finally {
+    ctaBtn.disabled = false;
+    ctaBtn.innerHTML = `Book a call
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M3 6h6m-3-3 3 3-3 3" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+  }
+});
+
+// ── Nav scroll state ──────────────────────────────────────────────────────────
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ── Scroll reveals + counters ─────────────────────────────────────────────────
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('.counter').forEach(startCounter);
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function startCounter(el) {
+  if (el.dataset.started) return;
+  el.dataset.started = '1';
+  const target   = parseFloat(el.dataset.count || el.parentElement.dataset.count || '0');
+  const decimals = parseInt(el.dataset.decimals || '0');
+  const duration = 1500;
+  const start    = performance.now();
+  function tick(now) {
+    const t      = Math.min(1, (now - start) / duration);
+    const eased  = 1 - Math.pow(1 - t, 3);
+    const val    = target * eased;
+    el.textContent = decimals ? val.toFixed(decimals) : Math.round(val).toString();
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+// ── Hero parallax ─────────────────────────────────────────────────────────────
+const panel = document.querySelector('.hero-panel');
+const glow  = document.querySelector('.hero-glow');
+window.addEventListener('scroll', () => {
+  const y = Math.min(400, window.scrollY);
+  if (panel) panel.style.transform = `rotateX(${8 - y * 0.012}deg) translateY(${y * 0.08}px)`;
+  if (glow)  glow.style.transform  = `translate(-50%, ${y * -0.15}px)`;
+}, { passive: true });
 </script>
+
+<!-- Spinner keyframe -->
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
 
 </body>
 </html>
