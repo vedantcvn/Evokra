@@ -233,6 +233,7 @@ section { padding: 120px 0; position: relative; }
   display: flex; justify-content: center;
   padding: 14px 24px;
   transition: padding .25s ease;
+  width: calc(100% - 30px);
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -915,7 +916,11 @@ section { padding: 120px 0; position: relative; }
 /* =========================================================
    Testimonials marquee
    ========================================================= */
-.marquee {
+#testimonials{
+  overflow: hidden;
+}
+
+   .marquee {
   position: relative;
   overflow: hidden;
   margin: 0 calc(-1 * var(--pad));
